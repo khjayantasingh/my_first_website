@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'start_app/base.html' %}
+{% block body_block %}
+	<h1>Welcome to index pages</h1>	
+	
+	{% if user.is_authenticated %}	
+		<h2>Hello {{user.username}}</h2> 
+	{% else %}
+		<h2>{{text |upper | cut:'Hello'}}</h2>
+	{% endif %}
+	
+{% endblock %}
